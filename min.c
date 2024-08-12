@@ -28,7 +28,7 @@ int main(void)
 {
     size_t i;
     ENTRY *e;
-    hcreate(30);
+    hcreate(LEN(data)*2);
     /* insert all but two last elements */
     for (i=0;i<LEN(data)-2;i++) hsearch((ENTRY){data[i],(void*)i}, ENTER);
     /* try to find last four elements - two should be missing */
